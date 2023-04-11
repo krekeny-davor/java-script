@@ -1,12 +1,29 @@
 // TODO: Implement the oddNumbers function
 
-function oddNumbers(num1, num2) {
-  for (let i = num1; i < num2; i++) {
-    if (i % 2 === 0) {
-    } else {
-      console.log(i);
+function oddNumbers(firstNum, secondNum) {
+  // Check if both parameters are positive numbers
+  if (
+    firstNum < 0 ||
+    secondNum < 0 ||
+    typeof firstNum !== "number" ||
+    typeof secondNum !== "number"
+  ) {
+    return "Please provide positive numbers as input.";
+  }
+
+  let oddNums = "";
+
+  // Iterate over all numbers between first number and second number
+  for (let i = firstNum; i <= secondNum; i++) {
+    // Check if the current number is odd
+    if (i % 2 !== 0) {
+      // Add the current number to the string of odd numbers
+      oddNums += i.toString() + ",";
     }
   }
+
+  // Remove the last comma from the string and return the result
+  return oddNums.slice(0, -1);
 }
 
 console.log(oddNumbers(0, 4));
@@ -27,8 +44,8 @@ function charCount(word, charachter) {
     return 0;
   }
   let count = 0;
-  for (let index = 0; index < word.length; index++) {
-    if (word[index].toLowerCase() === charachter.toLowerCase()) count++;
+  for (let i = 0; i < word.length; i++) {
+    if (word[i].toLowerCase() === charachter.toLowerCase()) count++;
   }
   return count;
 }
