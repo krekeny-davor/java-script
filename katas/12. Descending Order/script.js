@@ -11,19 +11,22 @@
 // Input: 123456789 Output: 987654321
 
 function descendingOrder(number) {
-  let string = number.toString();
-  string = string.split("");
-  let count = 0;
+  const numStr = number.toString();
+  const splitStr = numStr.split("");
+  const sortedArr = splitStr.sort();
+  const reversedArray = sortedArr.reverse();
+  const finalArray = reversedArray.join("");
+  const finalNumber = finalArray / 1;
 
-  for (let i = 0; i < string.length; i++) {
-    count++;
-    return string[i] * count;
-  }
-  return string;
+  return finalNumber;
 }
 
-// console.log(descendingOrder(42145));
-// console.log(descendingOrder(145263));
-// console.log(descendingOrder(123456789));
+// Simple solution:
+// return number.toString().split('').sort().reverse().join('');
 
+console.log(descendingOrder(42145));
+console.log(descendingOrder(145263));
+console.log(descendingOrder(123456789));
 console.log(descendingOrder(12345));
+console.log(descendingOrder(1));
+console.log(descendingOrder(0));
