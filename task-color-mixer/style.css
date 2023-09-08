@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(var(--red), var(--green), var(--blue));
+}
+
+header {
+  background-color: antiquewhite;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.js-input-red {
+  accent-color: #ff0000;
+}
+
+.js-input-green {
+  accent-color: #008000;
+}
+
+.js-input-blue {
+  accent-color: #0000ff;
+}
+
+.hex-code-container {
+  font-size: 1.5rem;
+}
