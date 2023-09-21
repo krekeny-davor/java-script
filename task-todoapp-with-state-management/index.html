@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ToDo App with State Management</title>
+</head>
+
+<body>
+
+  <h1>Todo App</h1>
+  <div class="container">
+    <div class="radio-labels">
+      <div>
+        <label for="all">All</label><input type="radio" id="all" name="filter" value="all" checked>
+      </div>
+      <div>
+        <label for="open">Open</label><input type="radio" id="open" name="filter" value="open">
+      </div>
+      <div>
+        <label for="done">Done</label><input type="radio" id="done" name="filter" value="done">
+      </div>
+    </div>
+    <div>
+      <button class="js-remove-done-todos">Remove done Todos</button>
+    </div>
+    <div>
+      <input class="js-todo-input" type="text" placeholder="What's up?">
+      <button class="js-add-todo-button">Add</button>
+    </div>
+  </div>
+  <ul class="js-todo-list">
+  </ul>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

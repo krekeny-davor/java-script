@@ -1,0 +1,19 @@
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.radio-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add a class for strikethrough effect */
+.crossed-todo {
+  text-decoration: line-through;
+}
